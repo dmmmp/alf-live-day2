@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Calculate your estimated daily calories with Coach Chandru." />
+    <title>Calorie calculator — Coach Chandru</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" /><link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell calculator-shell">
+      <nav class="site-nav" aria-label="Main navigation"><a class="wordmark" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>Coach Chandru</a><div class="nav-links"><a href="index.html">Home</a><a class="active" href="calculator.html">Calorie calculator</a><a class="nav-cta" href="index.html#start">Start your journey <span>↗</span></a></div></nav>
+      <section class="hero calculator-hero" aria-labelledby="page-title"><p class="eyebrow">A useful starting point</p><h1 id="page-title">Find your daily <em>calorie compass.</em></h1><p class="hero-copy">A clear estimate for your nutrition goals, calculated around your body and your everyday rhythm.</p></section>
+      <section class="calculator-card" aria-label="Calorie calculator"><form id="calorie-form" novalidate>
+        <div class="form-heading"><div><p class="section-kicker">01 / Your details</p><h2>Tell us a little about you</h2></div><span class="unit-note">Metric units</span></div>
+        <div class="field-grid"><label class="field"><span>Age <small>years</small></span><input id="age" name="age" type="number" min="15" max="100" placeholder="28" required /></label><fieldset class="field gender-field"><legend>Gender</legend><div class="segmented-control"><label><input type="radio" name="gender" value="female" checked /><span>Female</span></label><label><input type="radio" name="gender" value="male" /><span>Male</span></label></div></fieldset><label class="field"><span>Height <small>cm</small></span><input id="height" name="height" type="number" min="100" max="250" placeholder="170" required /></label><label class="field"><span>Weight <small>kg</small></span><input id="weight" name="weight" type="number" min="30" max="300" step="0.1" placeholder="68" required /></label></div>
+        <div class="activity-block"><div class="activity-label"><div><p class="section-kicker">02 / Your rhythm</p><h2>How active are you?</h2></div><span id="activity-value">Lightly active</span></div><input id="activity" type="range" min="1" max="5" value="2" step="1" aria-label="Activity level" /><div class="range-labels" aria-hidden="true"><span>Restful</span><span>Everyday</span><span>Intense</span></div><div class="activity-description" id="activity-description">Light exercise 1–3 days per week</div></div>
+        <div id="form-message" class="form-message" role="alert" aria-live="polite"></div><button class="calculate-button" type="submit">Calculate my calories <span aria-hidden="true">↗</span></button>
+      </form></section>
+      <section class="results" id="results" aria-live="polite" hidden><div class="results-heading"><div><p class="section-kicker">03 / Your compass</p><h2>Your daily calorie range</h2></div><button class="reset-button" id="reset-button" type="button">Start over <span>↻</span></button></div><div class="result-grid"><article class="result-card maintain-card"><div class="result-icon">→</div><p class="result-label">Maintain weight</p><strong id="maintain-calories">—</strong><span> kcal / day</span><p class="result-note">Your estimated daily energy need.</p></article><article class="result-card lose-card"><div class="result-icon">↓</div><p class="result-label">Lose weight</p><strong id="lose-calories">—</strong><span> kcal / day</span><p class="result-note">A gentle 15% calorie reduction.</p></article><article class="result-card gain-card"><div class="result-icon">↑</div><p class="result-label">Gain weight</p><strong id="gain-calories">—</strong><span> kcal / day</span><p class="result-note">A steady 15% calorie increase.</p></article></div><p class="disclaimer">These estimates are for guidance, not a diagnosis. Your ideal intake can vary with health, goals, and changing activity.</p></section>
+      <footer><span>COACH CHANDRU</span><span>Move well · Eat well · Live fully</span></footer>
+    </main><script src="script.js"></script>
+  </body>
+</html>
